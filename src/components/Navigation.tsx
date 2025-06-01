@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
@@ -15,7 +14,11 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleDownloadResume = () => {
@@ -36,12 +39,13 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
+            onClick={() => scrollToSection('top')}
             className="text-xl font-bold text-green-400"
           >
             UQ
-          </motion.div>
+          </motion.button>
           
           <div className="hidden md:flex items-center space-x-8">
             {['about', 'experience', 'projects', 'contact'].map((item) => (

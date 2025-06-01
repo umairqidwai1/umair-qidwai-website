@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -10,25 +9,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      technologies: ["React", "Node.js", "Stripe", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400",
-      link: "#"
+      title: "OSU Calorie Tracker",
+      description: "Currently developing a Calorie Tracker app for OSU dining halls with API integration and cross-platform mobile support.",
+      technologies: ["React Native", "API Integration", "iOS", "Android"],
+      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
+      link: "#",
+      status: "Current"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, team workspaces, and project analytics.",
-      technologies: ["Next.js", "Socket.io", "MongoDB", "Tailwind"],
+      title: "OSU Schedule Planner",
+      description: "Built a scheduling web app for OSU students with MySQL backend and React frontend, featuring optimized search and filter capabilities.",
+      technologies: ["React", "MySQL", "Web Development", "Search Optimization"],
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400",
-      link: "#"
+      link: "#",
+      status: "Sep. 2024"
     },
     {
-      title: "AI Content Generator",
-      description: "AI-powered content generation tool that helps businesses create marketing copy, blog posts, and social media content.",
-      technologies: ["Python", "OpenAI API", "React", "FastAPI"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400",
-      link: "#"
+      title: "Athan Player - IoT Automation",
+      description: "Developed a Raspberry Pi-based speaker system that plays audio at prayer times dynamically using Mosque API integration.",
+      technologies: ["Raspberry Pi", "IoT", "API Integration", "Python"],
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+      link: "#",
+      status: "Apr. 2024"
+    },
+    {
+      title: "Smart Home Automation",
+      description: "Converted an old home security system into a smart system using ESP32 and HomeAssistant, including smart locks and garage door automation.",
+      technologies: ["ESP32", "HomeAssistant", "IoT", "Mobile Control"],
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+      link: "#",
+      status: "Dec. 2023"
     }
   ];
 
@@ -44,7 +54,7 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
         
-        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -63,7 +73,12 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <span className="text-sm text-green-400 bg-green-500/20 px-2 py-1 rounded">
+                    {project.status}
+                  </span>
+                </div>
                 <p className="text-white/80 mb-4 leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">

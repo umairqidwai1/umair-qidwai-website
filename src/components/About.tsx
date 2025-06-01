@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -24,24 +23,24 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-white/90 leading-relaxed">
-                I'm a passionate full-stack developer with expertise in modern web technologies. 
-                I love creating beautiful, functional applications that solve real-world problems 
-                and provide exceptional user experiences.
+                I'm a Computer Science & Engineering student at The Ohio State University, 
+                passionate about software development and IoT automation. Currently working 
+                as a Teaching Assistant while developing innovative projects.
               </p>
               
               <p className="text-lg text-white/80 leading-relaxed">
-                With a strong foundation in both frontend and backend development, I specialize 
-                in React, Node.js, and cloud technologies. I'm always exploring new technologies 
-                and pushing the boundaries of what's possible on the web.
+                I specialize in mobile app development with React Native, web development, 
+                and IoT systems. I love building practical solutions that solve real-world 
+                problems, from smart home automation to university scheduling tools.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="text-center p-4 rounded-lg bg-green-500/10 border border-green-500/20">
-                  <div className="text-2xl font-bold text-green-400">5+</div>
-                  <div className="text-white/70">Years Experience</div>
+                  <div className="text-2xl font-bold text-green-400">2027</div>
+                  <div className="text-white/70">Graduation Year</div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-green-500/10 border border-green-500/20">
-                  <div className="text-2xl font-bold text-green-400">50+</div>
+                  <div className="text-2xl font-bold text-green-400">5+</div>
                   <div className="text-white/70">Projects Completed</div>
                 </div>
               </div>
@@ -51,9 +50,9 @@ const About = () => {
               <h3 className="text-xl font-semibold text-green-400 mb-6">Technologies</h3>
               
               {[
-                { category: 'Frontend', skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'] },
-                { category: 'Backend', skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'] },
-                { category: 'Cloud', skills: ['AWS', 'Docker', 'Kubernetes', 'Vercel'] }
+                { category: 'Languages', skills: ['Java', 'Python', 'JavaScript', 'SQL'] },
+                { category: 'Frameworks', skills: ['React Native', 'React', 'Flask', 'MySQL'] },
+                { category: 'Tools & Systems', skills: ['Git', 'Linux', 'Google Cloud', 'IoT'] }
               ].map((tech, index) => (
                 <motion.div
                   key={tech.category}

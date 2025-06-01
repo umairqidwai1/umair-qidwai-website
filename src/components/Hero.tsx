@@ -28,7 +28,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Full-Stack Developer & Designer crafting exceptional digital experiences
+            Computer Science & Engineering Student at The Ohio State University
           </motion.p>
           
           <motion.div
@@ -37,13 +37,13 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-4 text-green-400/80"
           >
-            <span>React</span>
-            <span>•</span>
-            <span>Node.js</span>
-            <span>•</span>
-            <span>TypeScript</span>
+            <span>React Native</span>
             <span>•</span>
             <span>Python</span>
+            <span>•</span>
+            <span>Java</span>
+            <span>•</span>
+            <span>IoT</span>
           </motion.div>
         </motion.div>
         

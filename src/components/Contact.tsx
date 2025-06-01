@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -28,7 +27,7 @@ const Contact = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              href="mailto:umair@example.com"
+              href="mailto:umairqidwai4@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-full transition-colors"
@@ -40,6 +39,8 @@ const Contact = () => {
               href="https://linkedin.com/in/umairqidwai"
               whileHover={{ scale: 1.05 }}
               className="px-8 py-4 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               LinkedIn
             </motion.a>
