@@ -1,0 +1,73 @@
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
+
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleDownloadResume = () => {
+    // This will be updated when you upload the resume
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Umair_Qidwai_Resume.pdf';
+    link.click();
+  };
+
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-green-500/20' : ''
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="text-xl font-bold text-green-400"
+          >
+            UQ
+          </motion.div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            {['about', 'experience', 'projects', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="text-white/80 hover:text-green-400 transition-colors capitalize"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleDownloadResume}
+            className="flex items-center space-x-2 bg-green-500/20 hover:bg-green-500/30 border border-green-500/50 rounded-full px-4 py-2 transition-all"
+          >
+            <Download size={16} />
+            <span>Resume</span>
+          </motion.button>
+        </div>
+      </div>
+    </motion.nav>
+  );
+};
+
+export default Navigation;
