@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* iOS Safari specific styles */
+body {
+  background-color: black;
+  color-scheme: dark;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+    padding-top: min(0vmin, env(safe-area-inset-top));
+    padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

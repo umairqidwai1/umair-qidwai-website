@@ -4,8 +4,12 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const Experience = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, {
+    once: true,
+    margin: "0px 0px -20% 0px",
+    amount: 0.2
+  });
 
   const experiences = [
     {
@@ -17,24 +21,22 @@ const Experience = () => {
     }
   ];
 
-  return (
-    <section id="experience" className="py-20 px-6">
+  return (    <section ref={sectionRef} id="experience" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-4xl md:text-5xl font-bold text-green-400 mb-12 text-center"
         >
           Experience & Education
         </motion.h2>
         
-        <div ref={ref} className="space-y-8">
-          {/* Education Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
+        <div className="space-y-8">
+          {/* Education Section */}          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="backdrop-blur-sm bg-white/5 rounded-xl border border-green-500/20 p-6 md:p-8 hover:bg-white/10 transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -60,11 +62,10 @@ const Experience = () => {
             </div>
           </motion.div>
 
-          {/* Google Certificate */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+          {/* Google Certificate */}          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
             className="backdrop-blur-sm bg-white/5 rounded-xl border border-green-500/20 p-6 md:p-8 hover:bg-white/10 transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -93,10 +94,9 @@ const Experience = () => {
           {/* Work Experience */}
           {experiences.map((exp, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ delay: (index + 2) * 0.2, duration: 0.8 }}
+              key={index}              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ delay: (index + 2) * 0.1, duration: 0.5, ease: "easeOut" }}
               className="backdrop-blur-sm bg-white/5 rounded-xl border border-green-500/20 p-6 md:p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">

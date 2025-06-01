@@ -50,7 +50,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-[15vh] md:bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <motion.button
             whileHover={{ scale: 1.1 }}
