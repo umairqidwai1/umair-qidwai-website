@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
@@ -47,16 +46,20 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         
-        <motion.button
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
-          whileHover={{ y: -5 }}
-          onClick={scrollToAbout}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-green-400 hover:text-green-300 transition-colors"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
-          <ArrowDown size={32} className="animate-bounce" />
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            onClick={scrollToAbout}
+            className="text-green-400 hover:text-green-300 transition-colors"
+          >
+            <ArrowDown size={32} className="animate-bounce" />
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

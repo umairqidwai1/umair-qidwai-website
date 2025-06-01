@@ -40,7 +40,7 @@ const Contact = () => {
 
           <div className="flex justify-center gap-6">
             <motion.a
-              href="https://linkedin.com/in/umairqidwai"
+              href="https://www.linkedin.com/in/umair-qidwai/"
               whileHover={{ scale: 1.1, y: -2 }}
               className="p-3 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
               target="_blank"
@@ -51,7 +51,7 @@ const Contact = () => {
             </motion.a>
             
             <motion.a
-              href="https://github.com/umairqidwai"
+              href="https://github.com/umairqidwai1"
               whileHover={{ scale: 1.1, y: -2 }}
               className="p-3 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
               target="_blank"
@@ -74,9 +74,8 @@ const Contact = () => {
           </div>
         </motion.div>
         
-        <footer className="mt-12 pt-8 border-t border-green-500/20">
-          <p className="text-white/60">
-            © 2024 Umair Qidwai. Crafted with passion and precision.
+        <footer className="mt-12 pt-8 border-t border-green-500/20">          <p className="text-white/60">
+            © 2025 Umair Qidwai. Crafted with passion and precision.
           </p>
         </footer>
       </div>

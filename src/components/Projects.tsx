@@ -29,11 +29,10 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
       status: "Apr. 2024"
     },
-    {
-      title: "Smart Home Automation",
+    {      title: "Smart Home Automation",
       description: "Converted an old home security system into a smart system using ESP32 and HomeAssistant, including smart locks and garage door automation.",
       technologies: ["ESP32", "HomeAssistant", "IoT", "Mobile Control"],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+      image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400",
       status: "Dec. 2023"
     }
   ];
