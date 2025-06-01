@@ -1,6 +1,8 @@
+
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -25,7 +27,7 @@ const Contact = () => {
             Let's discuss how we can bring your ideas to life.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <motion.a
               href="mailto:umairqidwai4@gmail.com"
               whileHover={{ scale: 1.05 }}
@@ -34,15 +36,40 @@ const Contact = () => {
             >
               Get In Touch
             </motion.a>
-            
+          </div>
+
+          <div className="flex justify-center gap-6">
             <motion.a
               href="https://linkedin.com/in/umairqidwai"
-              whileHover={{ scale: 1.05 }}
-              className="px-8 py-4 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="p-3 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <Linkedin size={24} />
+            </motion.a>
+            
+            <motion.a
+              href="https://github.com/umairqidwai"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="p-3 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github size={24} />
+            </motion.a>
+            
+            <motion.a
+              href="https://twitter.com/umairqidwai"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="p-3 border border-green-500/50 text-green-400 hover:bg-green-500/10 rounded-full transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <Twitter size={24} />
             </motion.a>
           </div>
         </motion.div>

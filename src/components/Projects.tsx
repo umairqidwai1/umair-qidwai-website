@@ -1,7 +1,7 @@
+
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -13,7 +13,6 @@ const Projects = () => {
       description: "Currently developing a Calorie Tracker app for OSU dining halls with API integration and cross-platform mobile support.",
       technologies: ["React Native", "API Integration", "iOS", "Android"],
       image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
-      link: "#",
       status: "Current"
     },
     {
@@ -21,7 +20,6 @@ const Projects = () => {
       description: "Built a scheduling web app for OSU students with MySQL backend and React frontend, featuring optimized search and filter capabilities.",
       technologies: ["React", "MySQL", "Web Development", "Search Optimization"],
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400",
-      link: "#",
       status: "Sep. 2024"
     },
     {
@@ -29,7 +27,6 @@ const Projects = () => {
       description: "Developed a Raspberry Pi-based speaker system that plays audio at prayer times dynamically using Mosque API integration.",
       technologies: ["Raspberry Pi", "IoT", "API Integration", "Python"],
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
-      link: "#",
       status: "Apr. 2024"
     },
     {
@@ -37,7 +34,6 @@ const Projects = () => {
       description: "Converted an old home security system into a smart system using ESP32 and HomeAssistant, including smart locks and garage door automation.",
       technologies: ["ESP32", "HomeAssistant", "IoT", "Mobile Control"],
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
-      link: "#",
       status: "Dec. 2023"
     }
   ];
@@ -81,7 +77,7 @@ const Projects = () => {
                 </div>
                 <p className="text-white/80 mb-4 leading-relaxed">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
@@ -91,15 +87,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
-                <motion.a
-                  href={project.link}
-                  whileHover={{ x: 5 }}
-                  className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors"
-                >
-                  <span>View Project</span>
-                  <ArrowRight size={16} />
-                </motion.a>
               </div>
             </motion.div>
           ))}
