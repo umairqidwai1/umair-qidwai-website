@@ -19,9 +19,9 @@ const FloatingCube = () => {
       <boxGeometry args={[1.5, 1.5, 1.5]} />
       <meshStandardMaterial 
         color="#10b981" 
-        transparent 
+        transparent={true}
         opacity={0.6}
-        wireframe 
+        wireframe={true}
       />
     </mesh>
   );
